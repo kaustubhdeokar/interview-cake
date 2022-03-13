@@ -1,0 +1,31 @@
+import java.util.*;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int testcases;
+        Scanner scanner = new Scanner(System.in);
+        testcases = scanner.nextInt();
+
+        for (int j = 0; j < testcases; j++) {
+
+            int arrLength = scanner.nextInt();
+            int[] resultArr = new int[arrLength];
+            for (int i = 1; i < arrLength; i++) {
+                resultArr[i - 1] = i + 1;
+            }
+
+            resultArr[arrLength - 1] = 1;
+
+            for (int i1 : resultArr) {
+                System.out.print(i1 + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
+}
+

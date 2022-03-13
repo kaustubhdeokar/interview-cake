@@ -1,0 +1,30 @@
+import java.util.*;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int testcases;
+        Scanner scanner = new Scanner(System.in);
+        testcases = scanner.nextInt();
+        for (int i = 0; i < testcases; i++) {
+            int digits = scanner.nextInt();
+
+            for (int j = 0; j < digits; j++) {
+
+                if(j==0||j==digits-1){
+                    System.out.print("3");
+                }
+                else{
+                    System.out.print("0");
+                }
+            }
+            System.out.println();
+        }
+
+
+    }
+
+}
+
