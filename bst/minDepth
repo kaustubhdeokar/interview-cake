@@ -1,0 +1,29 @@
+  class TreeLevelPair {
+        TreeNode treeNode;
+        int level;
+
+        TreeLevelPair(TreeNode treeNode, int level) {
+            this.treeNode = treeNode;
+            this.level = level;
+        }
+    }
+    
+    public int minDepth(TreeNode head) {
+         if (head == null){
+            return 0;
+        }
+        ArrayDeque<TreeLevelPair> queue = new ArrayDeque<>();
+        queue.addLast(new TreeLevelPair(head,1));
+
+        while (!queue.isEmpty()) {
+            TreeLevelPair top = queue.pop();
+            if (top.treeNode.left == null && top.treeNode.right == null)
+                return top.level;
+            if (top.treeNode.left != null)
+                queue.addLast(new TreeLevelPair(top.treeNode.left,top.level+1));
+            if (top.treeNode.right != null)
+                queue.addLast(new TreeLevelPair(top.treeNode.right,top.level+1));
+        }
+		// would never return from here. 
+		        return 0;
+    }
