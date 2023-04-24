@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-
-public class reverseWords {
+public class ReverseWords {
 
     public static void main(String[] args) {
 
