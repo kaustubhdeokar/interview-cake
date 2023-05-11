@@ -10,7 +10,7 @@ public class ArrayToTree {
         ArrayToTree arrayToTree = new ArrayToTree();
         TreeNode tree = arrayToTree.createTree(arr);
         if (tree != null) {
-            tree.traverse();
+            tree.traverseLevelOrder();
         }
 
     }
@@ -21,7 +21,6 @@ public class ArrayToTree {
         ArrayDeque<TreeNode> queue = new ArrayDeque<>();
         queue.add(head);
         int i = 1;
-
 
         while (!queue.isEmpty()) {
 

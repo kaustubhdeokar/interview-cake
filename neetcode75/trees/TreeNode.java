@@ -15,19 +15,36 @@ public class TreeNode {
         this.val = val;
     }
 
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
+    public TreeNode getCompleteTree(){
+        TreeNode head = new TreeNode(1);
+        head.left = new TreeNode(2);
+        head.right = new TreeNode(3);
+        head.left.left = new TreeNode(4);
+        head.left.right = new TreeNode(5);
+
+        head.right.left = new TreeNode(6);
+        head.right.right = new TreeNode(7);
+
+
+        /*
+                 1
+               /   \
+              2     3
+             / \   / \
+            4   5 6   7
+
+        */
+        return head;
     }
 
-    public void traverse() {
+
+
+    public void traverseLevelOrder() {
         TreeNode newHead = this;
-        traverse(newHead);
-
+        traverseLevelOrder(newHead);
     }
 
-    private void traverse(TreeNode newHead) {
+    public void traverseLevelOrder(TreeNode newHead) {
 
         if (newHead == null) return;
 
@@ -48,6 +65,5 @@ public class TreeNode {
             }
             System.out.println();
         }
-
     }
 }

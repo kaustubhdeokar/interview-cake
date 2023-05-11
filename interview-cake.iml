@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/linked-list-top-100" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/neetcode75" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/neetcode75/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/matrices" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/strings" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/bst" />
     </content>
     <orderEntry type="inheritedJdk" />
