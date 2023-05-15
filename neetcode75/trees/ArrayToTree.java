@@ -2,6 +2,10 @@ package trees;
 
 import java.util.ArrayDeque;
 
+/**
+ * incorrect tree for arr
+ * Integer[] arr = {10,20,30,40,50,-1,-1,60,90,-1,70,80,-1,-1,-1,-1,100};
+ */
 public class ArrayToTree {
 
     public static void main(String[] args) {
