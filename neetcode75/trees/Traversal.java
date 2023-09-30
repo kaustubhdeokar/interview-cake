@@ -14,18 +14,6 @@ public class Traversal {
         TreeNode completeTree = treeNode.getCompleteTree();
         Traversal traversal = new Traversal();
 
-//        System.out.println("Inorder: left -> print node value -> right");
-//        traversal.traverseInorder(completeTree);
-//        System.out.println();
-
-//        System.out.println("Pre order: print node value -> left -> right");
-//        traversal.traversePreOrder(completeTree);
-//        System.out.println();
-
-//        System.out.println("Post order: left child -> right child -> print node value.");
-//        traversal.traversePostOrder(completeTree);
-//        System.out.println();
-
         System.out.println("Level order traversal:");
         traversal.performLevelOrderTraversal(treeNode.getTree1());
 
