@@ -1,4 +1,6 @@
-package trees;
+package binarytree;
+
+import main.TreeNode;
 
 /**
  * This is the longest distance between any two nodes.
@@ -8,11 +10,9 @@ public class DiameterOfBinaryTree {
     public static void main(String[] args) {
 
         DiameterOfBinaryTree diameter = new DiameterOfBinaryTree();
-
-        TreeNode head = new TreeNode().createTree2();
-
-        System.out.println(diameter.calculateDiameterOfBinaryTree(head));
-
+        BinaryTreeImpl binaryTree = new BinaryTreeImpl();
+        TreeNode root = binaryTree.createTreeAccordingToUserInput();
+        System.out.println(diameter.calculateDiameterOfBinaryTree(root));
     }
 
     private int calculateDiameterOfBinaryTree(TreeNode head) {

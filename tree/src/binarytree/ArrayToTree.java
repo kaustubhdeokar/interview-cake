@@ -1,11 +1,10 @@
-package trees;
+package binarytree;
+
+import main.Traversal;
+import main.TreeNode;
 
 import java.util.ArrayDeque;
 
-/**
- * incorrect tree for arr
- * Integer[] arr = {10,20,30,40,50,-1,-1,60,90,-1,70,80,-1,-1,-1,-1,100};
- */
 public class ArrayToTree {
 
     public static void main(String[] args) {
@@ -13,10 +12,8 @@ public class ArrayToTree {
         Integer[] arr = {3, 1, 4, 3, null, 1, 5};
         ArrayToTree arrayToTree = new ArrayToTree();
         TreeNode tree = arrayToTree.createTree(arr);
-        if (tree != null) {
-            tree.traverseLevelOrder();
-        }
-
+        Traversal traversal = new Traversal(true);
+        traversal.levelOrder(tree);
     }
 
     public TreeNode createTree(Integer[] arr) {

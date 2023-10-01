@@ -1,8 +1,6 @@
-package trees;
+package binarytree;
 
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import main.TreeNode;
 
 import java.util.ArrayList;
 
@@ -42,14 +40,14 @@ public class FindLeavesOfTree {
 * * */
 
 
-    public ArrayList<ArrayList<Integer>> findLeaves(@NotNull TreeNode node) {
+    public ArrayList<ArrayList<Integer>> findLeaves(TreeNode node) {
 
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
         heightTraversal(node, list);
         return list;
     }
 
-    public int heightTraversal(@Nullable TreeNode node, ArrayList<ArrayList<Integer>> list) {
+    public int heightTraversal(TreeNode node, ArrayList<ArrayList<Integer>> list) {
 
         if (node == null) {
             return 0;

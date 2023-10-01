@@ -1,5 +1,6 @@
-package trees;
+package binarytree;
 
+import main.TreeNode;
 import java.util.Stack;
 
 public class KthSmallestInBST {
@@ -14,32 +15,22 @@ public class KthSmallestInBST {
         int count = 0;
         TreeNode curr = root;
 
-        while(!q.isEmpty() || curr!=null){
-
-            while(curr!=null){
+        while (!q.isEmpty() || curr != null) {
+            while (curr != null) {
                 q.push(curr);
                 curr = curr.left;
             }
-
-            while(!q.isEmpty() && q.peek().right==null){
-
+            while (!q.isEmpty() && q.peek().right == null) {
                 TreeNode popped = q.pop();
-                count +=1;
-
-                if(count==k) return popped.val;
-
+                count += 1;
+                if (count == k) return popped.val;
             }
-
-            if(!q.isEmpty()){
+            if (!q.isEmpty()) {
                 TreeNode popped = q.pop();
-                count+=1;
-
-                if(count==k) return popped.val;
-
+                count += 1;
+                if (count == k) return popped.val;
                 curr = popped.right;
             }
-
-
         }
 
         return -1;

@@ -1,20 +1,16 @@
-package trees;
+package binarytree;
+
+import main.TreeNode;
 
 import java.util.ArrayList;
 
 public class NodesAtDistanceK {
 
     public static void main(String[] args) {
-
-        Integer[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-
-        SerializeDeserialize serializeDeserialize = new SerializeDeserialize();
-        TreeNode head = serializeDeserialize.createTreeFromArray(arr);
-
+        BinaryTreeImpl binaryTree = new BinaryTreeImpl();
+        TreeNode root = binaryTree.createTreeAccordingToUserInput();
         NodesAtDistanceK distK = new NodesAtDistanceK();
-        distK.getNodesAtDist(head, head.right.right, 2);
-
-
+        distK.getNodesAtDist(root, root, 2);
     }
 
     private void getNodesAtDist(TreeNode head, TreeNode target, int dist) {
